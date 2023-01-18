@@ -1,0 +1,4 @@
+Pág clínica
+Buscar responsividade colocando todas as outras páginas dentro da landing page através do js.
+
+chamar as páginas usando w3-include-html

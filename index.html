@@ -4,37 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horário de Atendimento</title>
-    <link rel="stylesheet" href="base.css">
+    <title>Template - Utilizar como modelo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="menu">
             <ul>
-                <li><a href="./clinica.html">Página Principal</a></li>
-                <li><a href="./sobre.html">Sobre a clínica</a></li>
-                <li><a href="./atendimento.html">Horário de Atendimento</a></li>
-                <li><a href="./contato.html">Contato</a></li>
+                <li><button onclick="includePrincipal()">Principal</button></li>
+                <li><button onclick="includeSobre()">Sobre a Clínica</button></li>
+                <li><button onclick="includeAtendimento()">Horário de Atendimento</button></li>
+                <li><button onclick="includeContato()">Contato</a></li>
             </ul>
         </div>
 
         <div class="main">
             <div class="header">
-                <img id="atende" src="./imagens/header.png" alt="Imagem de ultrassom com gestante ao fundo">
+                <img src="./imagens/header2.png" alt="Imagem de um exame de gestação">
                 <figcaption>Clínica Ultrassônica</figcaption>
             </div>
-    
-            <div class="content">
-                <h4>Horário de Atendimento</h4>
+            <div class="content" >
+                <div id="mudar_pag" w3-include-html></div>
             </div>
-            <div id="div_tabela">
-                
-            </div>
-    
             <div class="footer">
                 <p>Copyright &copy <span id="year"></span>Tel (79)99108-1521</p>
             </div>
         </div>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>

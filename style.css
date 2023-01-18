@@ -23,6 +23,13 @@ body {
     width: 15%;
     background-color: rgb(171, 245, 245);
 }
+ul {
+    padding-left: 0px;
+}
+li {
+    list-style-type: none;
+    position: inherit;
+}
 .header {
     display: flex;
     background-color: rgb(5, 108, 108);
