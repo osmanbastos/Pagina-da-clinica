@@ -2,14 +2,15 @@ html, body {
     margin: 0;
     display: flex;
     flex-flow: column;
+    flex-wrap: wrap;
     justify-content: center;
-}
-header {
-    text-align: center;
-}
-body {
     align-items: center;
     background-color: #f1f1f1;
+    text-align: center;
+    position: relative;
+}
+header h1 {
+    margin: 0;
 }
 .material-symbols-outlined {
     font-variation-settings:
@@ -19,15 +20,12 @@ body {
     'opsz' 48
 }
 .wrapper {
-    background-color: aquamarine; 
     display: flex;
-    width: 1200px;
 }
 .menu {
     background-color: aqua;
     display: flex;
     justify-content: center;
-    position: relative;
     width: 15%;
 }
 ul {
@@ -55,7 +53,6 @@ ul {
     height: 100%;
     margin: 0%;
     position: inherit;
-    width: 100%;
 }
 .cabecalho figcaption {
     color: rgb(255, 255, 255);
