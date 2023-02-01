@@ -1,10 +1,15 @@
 html, body {
     margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+header {
+    text-align: center;
 }
 body {
+    align-items: center;
     background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
 }
 .material-symbols-outlined {
     font-variation-settings:
@@ -36,6 +41,7 @@ ul {
 .header {
     background-color: rgb(5, 108, 108);
     min-height: 150px;
+    max-height: 200px;
 }
 .cabecalho {
     display: flex;
@@ -52,7 +58,7 @@ ul {
     width: 100%;
 }
 .cabecalho figcaption {
-    color: rgb(5, 108, 108);
+    color: rgb(255, 255, 255);
     font-size: 40px;
     position: absolute;
     text-shadow: 0px 5px 5px #000000;
@@ -65,8 +71,17 @@ ul {
     padding: 20px;
     flex-flow: column;
 }
+fieldset {
+    display: flex;
+    justify-content: center;
+}
+fieldset #buttons {
+    display: flex;
+    flex-direction: column;
+}
 .footer {
     background-color: rgb(99, 56, 240);
+    color: rgb(255, 255, 255);
     min-height: 50px;
     text-align: center;
 }
