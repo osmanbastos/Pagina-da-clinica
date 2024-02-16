@@ -57,14 +57,14 @@
 
                 <fieldset><legend>Formulário de contato</legend>
                     <form action="mailto:osmanbastos@hotmail.com" method="post" enctype="text/plain">
-                        <label for="nome">Nome</label>
-                        <input type="text">
-                        <label for="nome">E-mail</label>
-                        <input type="email">
-                        <label for="nome">Assunto</label>
-                        <input type="text">
-                        <label for="nome">Mensagem</label>
-                        <textarea rows="4" cols="50"></textarea>
+                        <label for="firstName">Nome</label>
+                        <input type="text" name="firstName" id="firstName" autocomplete="given-name">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" autocomplete="email">
+                        <label for="subject">Assunto</label>
+                        <input type="text" name="subject" id="subject">
+                        <label for="message">Mensagem</label>
+                        <textarea rows="4" cols="50" name="message" id="message"></textarea>
                         <div id="buttons">
                             <input id="enviar" type="submit" value="Enviar">
                             <input id="limpar" type="reset" value="Limpar Formulário">
@@ -76,7 +76,7 @@
                     Ou venha nos visitar em Aracaju-SE:
                 </h3>
                 <div id="mapa">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15666.115454131108!2d-37.09368589999999!3d-10.998890349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1674700882297!5m2!1spt-PT!2sbr" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15666.115454131108!2d-37.09368589999999!3d-10.998890349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1674700882297!5m2!1spt-PT!2sbr" width="auto" height="auto" style="border:0;" allowfullscreen="" loading=async referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             
@@ -88,6 +88,13 @@
     
     <script>
         document.getElementById('year').innerText = new Date().getFullYear();
+        async function addAsyncMap() {
+            await new Promise(resolve => setTimeout(resolve, 0));
+            var iframe = document.getElementById('mapa');
+            if (iframe) {
+                iframe.setAttribute('loading', 'async');
+            }
+        }
     </script>
 </body>
 </html>
